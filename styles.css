@@ -1,0 +1,177 @@
+/* ==========================================================================
+   Omnitrix Codex — styles.css
+   CSS externo único (sem <style> inline), conforme requisito do trabalho.
+   ========================================================================== */
+
+/* ---------- 1. Variáveis / Design Tokens -------------------------------- */
+:root {
+  /* Paleta Sci-Fi Ben 10 (máx. de cores principais) */
+  --bg-primary: #0a0f0d;
+  --bg-card: #14211b;
+  --bg-card-alt: #101a15;
+  --green-omnitrix: #00ff66;
+  --green-dark: #0f5132;
+  --red-vilao: #ff3b3b;
+  --red-vilao-dark: #5c1010;
+  --text-light: #f0fdf4;
+  --text-muted: #94a3b8;
+
+  /* Tipografia */
+  --font-main: Arial, Helvetica, sans-serif;
+  --font-heading: "Trebuchet MS", Arial, sans-serif;
+
+  /* Espaçamento e bordas */
+  --border-radius: 10px;
+  --transition-speed: 0.3s;
+  --max-line-length: 68ch;
+}
+
+/* ---------- 2. Reset básico e corpo do documento ------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* 16px */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-light);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: var(--green-omnitrix);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  max-width: var(--max-line-length);
+  margin: 0 0 1em 0;
+  text-align: left;
+}
+
+a {
+  color: var(--green-omnitrix);
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+/* ---------- 3. Acessibilidade: skip-link e foco visível ------------------ */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--green-omnitrix);
+  color: #000;
+  padding: 0.75em 1.2em;
+  z-index: 100;
+  border-radius: 0 0 var(--border-radius) 0;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--green-omnitrix);
+  outline-offset: 3px;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ---------- 4. Cabeçalho e navegação -------------------------------------- */
+.header-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--green-dark);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.omnitrix-icon-img {
+  height: 1.8rem;
+  width: auto;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-light);
+  padding: 0.35em 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--transition-speed), color var(--transition-speed);
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: var(--green-omnitrix);
+  border-color: var(--green-omnitrix);
+}
+
+.nav-link.active {
+  color: var(--green-omnitrix);
+  border-color: var(--green-omnitrix);
+  font-weight: bold;
+}
+
+/* Secoes viram "paginas" trocadas via menu (ver js/navegacao.js) em vez
+   de ficarem todas empilhadas para rolagem continua. */
+.page-section {
+  outline: none;
+}
