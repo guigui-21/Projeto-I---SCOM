@@ -217,3 +217,59 @@ button {
 .secao-intro {
   color: var(--text-muted);
 }
+
+/* ---------- 6. Cards de personagens (Grid) -------------------------------- */
+.cards-section {
+  padding: 2rem 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card-personagem {
+  background-color: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  border: 1px solid var(--green-dark);
+  transition: transform var(--transition-speed), border-color var(--transition-speed);
+}
+
+.card-personagem:hover,
+.card-personagem:focus-within {
+  transform: translateY(-4px);
+  border-color: var(--green-omnitrix);
+}
+
+.card-personagem figure {
+  margin: 0 0 0.75rem 0;
+  text-align: center;
+}
+
+.card-personagem figcaption {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+}
+
+.card-personagem figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Fotos reais dos personagens (PNG com fundo transparente):
+   nao usamos recorte circular para nao cortar cabeca/pes da arte. */
+.card-personagem figure img.foto-personagem {
+  border-radius: 0;
+  height: 160px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
