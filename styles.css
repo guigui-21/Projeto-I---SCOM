@@ -428,8 +428,8 @@ button {
 
 .omnitrix-dial {
   position: relative;
-  width: 12rem;
-  height: 12rem;
+  width: 13rem;
+  height: 13rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -467,8 +467,8 @@ button {
 
 .dial-face {
   position: relative;
-  width: 5.5rem;
-  height: 5.5rem;
+  width: 7.2rem;
+  height: 7.2rem;
   border-radius: 50%;
   background-color: var(--dial-color-secondary, #1c1c1c);
   border: 3px solid var(--dial-color-primary, var(--green-omnitrix));
@@ -484,8 +484,8 @@ button {
 }
 
 .dial-symbol-img {
-  width: 3.6rem;
-  height: 3.6rem;
+  width: 5.6rem;
+  height: 5.6rem;
   object-fit: contain;
 }
 
