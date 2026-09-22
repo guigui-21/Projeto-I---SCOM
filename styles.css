@@ -201,7 +201,7 @@ button {
   border-radius: var(--border-radius);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .hero-conteudo {
     flex-direction: row;
     align-items: center;
@@ -211,12 +211,6 @@ button {
   .hero-imagem {
     max-width: 380px;
     flex-shrink: 0;
-  }
-
-  /* Cards de vilões tem mais texto que os de personagem: 3 colunas
-     (em vez das 4 do grid padrão) mantêm a leitura confortável. */
-  .grid-cards-viloes {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -657,4 +651,77 @@ button {
 
 .details-info p {
   max-width: none;
+}
+
+/* ---------- 11. Rodapé ------------------------------------------------------ */
+.footer-main {
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  color: var(--text-muted);
+  border-top: 1px solid var(--green-dark);
+  font-size: 0.85rem;
+}
+
+.footer-main p {
+  max-width: none;
+  margin: 0.25rem 0;
+}
+
+/* ==========================================================================
+   Breakpoints (mobile-first)
+   ========================================================================== */
+
+/* Tablet: 768px a 1024px */
+@media screen and (min-width: 768px) {
+  .header-main {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .display-panel {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    grid-template-areas: "dial lista";
+    align-items: start;
+  }
+
+  .dial-column {
+    grid-area: dial;
+  }
+
+  .alien-list-aside {
+    grid-area: lista;
+  }
+
+  .card-body {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
+/* Desktop: acima de 1024px */
+@media screen and (min-width: 1024px) {
+  .grid-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Cards de vilões tem mais texto que os de personagem: 3 colunas
+     (em vez das 4 do grid padrão) mantêm a leitura confortável. */
+  .grid-cards-viloes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-section {
+    padding: 4rem 2rem;
+  }
+
+  .display-panel {
+    grid-template-columns: 1fr 320px;
+  }
 }

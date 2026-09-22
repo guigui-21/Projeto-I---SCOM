@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="alien-figure" aria-hidden="true">
           ${
             alien.imagem
-              ? `<img src="${alien.imagem}" alt="${alien.imagemAlt || ""}" class="foto-alien" />`
+              ? `<img src="${alien.imagem}" width="${alien.imagemW || 160}" height="${alien.imagemH || 160}" alt="${alien.imagemAlt || ""}" class="foto-alien" />`
               : buildAlienGlyph(alien.id)
           }
         </div>

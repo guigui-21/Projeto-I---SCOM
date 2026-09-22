@@ -275,8 +275,9 @@ const aliensData = {
     { id: "diabrete", nome: "Diabrete", especie: "Planchaküle", planeta: "Aul-Turrhen",
       habilidades: ["Desmontagem e montagem de tecnologia em segundos"],
       feito: "Desmontou os sistemas de freio da gigantesca espaçonave de Vilgax num piscar de olhos.",
-      imagem: "assets/aliens/diabrete.png",
-      imagemAlt: "Ilustração do alienígena Diabrete" },
+      imagem: "assets/aliens/diabrete.jpg",
+      imagemAlt: "Ilustração do alienígena Diabrete",
+      imagemW: 295, imagemH: 360 },
   ],
 
   omniverse: [
@@ -293,8 +294,9 @@ const aliensData = {
     { id: "crashhopper", nome: "Crashhopper", especie: "Orthopterrano", planeta: "Insetóia",
       habilidades: ["Pulos super-potentes", "Crânio blindado"],
       feito: "Bateu a cabeça e quebrou o casco de múltiplos mísseis no ar antes de acertarem o alvo.",
-      imagem: "assets/aliens/crashhopper.png",
-      imagemAlt: "Ilustração do alienígena Crashhopper" },
+      imagem: "assets/aliens/crashhopper.jpg",
+      imagemAlt: "Ilustração do alienígena Crashhopper",
+      imagemW: 360, imagemH: 360 },
     { id: "escarabola", nome: "Escarábola", especie: "Desconhecida", planeta: "Desconhecido",
       habilidades: ["Criação de bolas de plasma magnéticas e gosmentas"],
       feito: "Absorveu e enrolou detritos explosivos capazes de engolir máquinas gigantescas." ,
